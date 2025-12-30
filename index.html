@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Carta Online</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title text-center">Lista de Menús</h1>
+    <div class="elementBox">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-entrada-tab" data-bs-toggle="tab" data-bs-target="#nav-entrada" type="button"
+          role="tab" aria-controls="nav-entrada" aria-selected="true">Entrada</button>
+        <button class="nav-link" id="nav-principal-tab" data-bs-toggle="tab" data-bs-target="#nav-principal" type="button"
+          role="tab" aria-controls="nav-principal" aria-selected="false">Principal</button>
+        <button class="nav-link" id="nav-extra-tab" data-bs-toggle="tab" data-bs-target="#nav-extra" type="button" role="tab"
+          aria-controls="nav-extra" aria-selected="false">Extras</button>
+      </div>
+      <!-- ====================================== -->
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-entrada" role="tabpanel" aria-labelledby="nav-entrada-tab" tabindex="0">
+        </div>
+        <div class="tab-pane fade" id="nav-principal" role="tabpanel" aria-labelledby="nav-principal-tab" tabindex="0">
+        </div>
+        <div class="tab-pane fade" id="nav-extra" role="tabpanel" aria-labelledby="nav-extra-tab" tabindex="0">
+        </div>
+      </div>
+
+      <div class="todo-list" id="todoList" style="display: none;">
+        <span id="platosXD" class="d-none"></span>
+        <div class="list-head">
+          <input type="text" class="entered-list">
+          <button type="button" class="add-list">Add</button>
+        </div>
+        <div class="tasks">
+          <!-- <div class="item">
+                  <p>New Item here</p>
+                  <div class="item-btn">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                      <i class="fa-solid fa-xmark"></i>
+                  </div>
+              </div> -->
+        </div>
+      </div>
+      <!-- ===================================== -->
+    </div>
+
+    <div class="elementBox">
+      <section class="wrap">
+        <div class="wrap-title-section">
+          <h2>Entradas</h2>
+        </div>
+        <div data-name-plato="entrada" class="wrap column-2 carta d_nE wrapCarta">
+          <!-- <div class="plato-carta entrada">
+            <div class="title-plato-carta">
+              <h4>Sopa de Casa.</h4>
+            </div>
+          </div> -->
+
+        </div>
+        <div class="wrap-title-section">
+          <h2>Platos Principales</h2>
+        </div>
+        <div data-name-plato="principal" class="wrap column-2 carta d_nP wrapCarta">
+
+        </div>
+        <div class="wrap-title-section">
+          <h2>Platos Extras</h2>
+        </div>
+        <div data-name-plato="extra" class="wrap column-2 carta d_nX wrapCarta">
+
+        </div>
+      </section>
+    </div>
+
+    <div class="btn-imagen my-3 text-center">
+      <button id="generarCartaBtn" type="button" class="btn btn-dark">Generar Carta</button>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #f7f9f7;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 80px 60px;
+    background-image: url("carta.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin: 40px 0 20px;
+    font-weight: 600;
+}
+
+ul {
+    list-style: disc;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+li {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .menu-container {
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}

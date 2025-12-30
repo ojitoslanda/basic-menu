@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú</title>
+    <link rel="stylesheet" href="carta.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="menu-container">
+      <h1>MENÚ</h1>
+      <div class="menu-actions"></div>
+
+      <h2>ENTRANTE</h2>
+      <ul id="lista-entrada"></ul>
+
+      <h2>PLATOS PRINCIPALES</h2>
+      <ul id="lista-principal"></ul>
+
+      <h2>PLATOS EXTRAS</h2>
+      <ul id="lista-extra"></ul>
+    </div>
+
+    <script src="carta.js"></script>
+    <script>
+      // If the carta page is opened before any data exists, try to reload after 200ms.
+      // (This helps if the user clicks "Generar Carta" immediately after adding.)
+      setTimeout(() => {
+        // noop - carta.js handles DOMContentLoaded and reads localStorage
+      }, 200);
+    </script>
+  </body>
+</html>

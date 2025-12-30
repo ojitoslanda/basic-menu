@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    height: 100vh;
+    max-width: 100vw;
+}
+
+/*====================================== START CSS GRID  ====================================== */
+.container {
+    /* Mobile-first: usar una sola columna en todos los dispositivos
+       para que el aspecto sea consistente entre móvil, tablet y desktop */
+    display: block;
+    width: 100%;
+    max-width: 540px !important;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.elementBox {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 30px;
+}
+
+@media (max-width:680px) {
+    .container {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    
+    .elementBox {
+        border: 1px solid rgb(40, 9, 150);
+        padding: 10px !important;
+    }
+    
+    .todo-list{
+        width: 100% !important
+    }
+
+    .title{
+        text-align: center;
+    }
+}
+
+
+
+
+/*====================================== END CSS GRID  ====================================== */
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(8, 6, 133);
+    letter-spacing: 1px;
+    margin: 30px 0;
+}
+
+.todo-list {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.list-head {
+    display: flex;
+    align-items: center;
+    gap: 0; /* no gap so the button sits flush to the input */
+    width: 100%;
+} 
+
+
+.entered-list {
+    flex: 1 1 auto;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-right: none; /* removes double border with button */
+    font-size: 16px;
+    border-radius: 6px 0 0 6px; /* rounded on left only */
+    min-width: 0; /* prevent overflow in flex */
+} 
+
+.add-list {
+    border: none;
+    border-radius: 0 6px 6px 0; /* rounded on right only */
+    background-color: rgb(34, 6, 133);
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    opacity: .6;
+    pointer-events: none;
+    padding: 10px 16px;
+    height: 42px; /* align with input height */
+}
+
+.add-list.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tasks {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.item {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+.item.completed p {
+    text-decoration: line-through;
+    color: #11111180;
+}
+
+.item-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-btn i {
+    color: rgb(8, 6, 133);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* INICIO DE STYLE DE LOS MENUS */
+/** Tarjetas Restaurante **/
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+.column-2.carta {
+    /* Forzar una columna única para mantener el mismo formato que en móvil */
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+  
+  .plato-carta {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+  }
+  
+  .title-plato-carta {
+    border-bottom: none;
+    border-top: none;
+    flex-basis: 60%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .title-plato-carta h4 {
+    font-weight: initial;
+  }
+  
+  
+    /* Mantener consistencia: no necesitamos cambiar estructura en breakpoints */
+    @media (max-width:680px) {
+        .wrap-title-section {
+            margin-top: 15px;
+        }
+
+        .plato-carta {
+            flex-direction: column;
+        }
+    }
+
+/* loader animation */
+.carta-modal {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 900px;
+  width: 95%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.carta-preview {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.carta-modal .modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+.carta-modal .modal-actions button {
+  padding: 8px 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.carta-modal .btn-primary { background: #2c3e50; color: #fff; }
+.carta-modal .btn-outline { background: transparent; border: 1px solid #2c3e50; color: #2c3e50; }
+.carta-modal img { max-width: 100%; height: auto; display:block; margin: 0 auto; }
+
